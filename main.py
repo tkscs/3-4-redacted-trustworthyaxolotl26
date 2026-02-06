@@ -1,7 +1,12 @@
 def redact(original_string):
     new_string = ""
     for word in original_string.split(" "):
-        # YOUR CODE HERE
+        new_string += " "
+        up = word.capitalize()
+        if word == up:
+            new_string += "[REDACTED]"
+        else: 
+            new_string += word
     return new_string
 
 eb_bio = "Erin came to Kehillah after getting her PhD in Cognitive Science \
@@ -40,6 +45,13 @@ as a result has developed a keen interest in mental health in young people, as \
 well as enabling students to pursue Higher Education. In her spare time, Zoe is \
 enjoying exploring California with her partner and their dog and enjoys good food, \
 exercise, and women's soccer."
+
+print()
+
 print(redact(eb_bio))
+print()
 print(redact(kuszmaul_bio))
+print()
 print(redact(dsouza_bio))
+
+print()
